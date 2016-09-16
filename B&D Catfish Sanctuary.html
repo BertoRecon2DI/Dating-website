@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Dating Website</title>
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+
+
+
+
+
+
+
+
+</head>
+<style>
+ textarea{width:360px;
+     height: 50px;}
+
+
+label{display:inline-block; width: 180px; text-align: right ; width: 180px;}
+   fieldset{
+       background-color:#fcffb6 ; hover {font-size:40px}
+   }
+   fieldset{
+       border:10px solid yellow;
+       width: 720px;
+   }
+
+article, aside, figure, footer, header, hgroup,
+  menu, nav, section { display: block; }
+
+</style>
+
+<body>
+
+<article>
+<h1>Please Enter Your Details For Our Dating Website!</h1>
+
+<fieldset> <br><legend><strong>Your face:</strong></legend>
+    <label type="preview"><strong>Your image</strong></label>
+    <input type="file" required id="file" onchange="readURL(this)">
+    <input type='file' onchange="readURL(this);" />
+    <img id="blah" src="#" alt="your image" />
+
+    <br>
+    <label><strong>Image preview:</strong></label></br>
+</fieldset></br>
+
+
+<fieldset>
+   <legend><strong>Your general details:</strong></legend>
+<br>
+    <label for="name" id="name"><strong>name:</strong></label>
+    <input type="text" placeholder=" your name here" required>
+    <div></div>
+    <label for="gender" id="gender"><strong>Gender:</strong></label>
+    <input type="radio" name="gender" value="male" width="auto"required><strong>male</strong>
+    <input type="radio" name="gender" value="female" width="auto" required><strong>female</strong>
+    <div></div>
+    <label for="Age"><strong>Age:</strong></label>
+    <input type="number" name="Age" id="Age"  value="Age" style="width:25px" required>
+    <div></div>
+    <label for="Date"><strong>Date:</strong></label>
+    <input type="Date" name="Date" id="Date" value="Date" required>
+    <div></div>
+    <label for="color"><strong>Favorite Color:</strong></label>
+    <input type="color" name="color" id="color" value="color" required>
+    <div></div>
+
+<div>
+<label for="country"><strong>Which country:</strong></label>
+<select id="country">
+
+<option>No Selection</option>
+<option>America</option>
+<option>Britan</option>
+<option>Canada</option>
+<option>France</option>
+<option>Russia</option>
+
+</select>
+</div>
+</fieldset></br>
+<fieldset><br>
+    <legend><strong>Your indication:</strong></legend>
+    <label><strong>Height:</strong></label>
+    <span style="background: #ff0802">short</span>
+    <input type="range" min="0" max="100">
+    <span style="background: #ff0cda">Tall</span>
+
+    </br> <label><strong>Salary:</strong></label>
+    <span class="red" style="background: #ff0802">Poor</span>
+    <input type="range" min="0" max-="100">
+    <span class="pink" style="background: #ff1fc2">Rich</span>
+
+
+</fieldset></br>
+
+<fieldset>
+    <legend><strong>Your contact information:</strong></legend>
+    <label for="email"><strong>Email:</strong></label>
+<input type="email" name="email"  id="email" required>
+    <div></div>
+    <label for="tel"><strong>Mobile</strong></label>
+<input type="tel" name="tel"  id="tel">
+    <div></div>
+    <label for="Address"><strong>Address:</strong></label>
+    <textarea  input type="checkbox" name="Address" id="Address">
+
+    </textarea>
+    <div></div>
+    <label ><strong>Method to contact you:</strong></label>
+    <input type="checkbox"> <strong>Email</strong>
+    <input type="checkbox"> <strong>Whatsapp</strong>
+    <input type="checkbox"> <strong>In-app chat</strong>
+    <input type="submit">
+
+
+</fieldset>
+
+
+    <script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#blah')
+                            .attr('src', e.target.result)
+                            .width(150)
+                            .height(200);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+
+
+
+
+</article>
+</body>
+</html>
